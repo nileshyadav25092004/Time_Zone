@@ -1,0 +1,107 @@
+<html>
+    <head>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="moment.js"></script>
+        <script src="moment-timezone-with-data-10-year-range.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@1.16.0/build/global/luxon.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet">
+        <style>
+            .container{
+                position:relative;
+                transform: translate(1%,30%);
+            }
+            button{
+                position: relative;
+                top:25%;
+                left: 31.5%;
+            }
+            body{
+                background: rgb(214, 166, 77);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+            <div class="card col-sm">
+                <div class="card-title">
+                    Start
+
+                </div>
+                <div class="card-body">
+        <label for="starting-area">Choose the continent/area that your starting time zone is in: </label>
+        <select name="starting-area" id="starting-area" onchange="resetStartTzDropdown()">
+            <option>America</option>
+            <option>Africa</option>
+            <option>Antarctica</option>
+            <option>Arctic</option>
+            <option>Asia</option>
+            <option>Atlantic</option>
+            <option>Australia</option>
+            <option>Europe</option>
+            <option>Indian</option>
+            <option>Pacific</option>
+        </select>
+
+        <label for="initial-time-zones">Choose a starting Time:</label>
+        <select name="initial-time-zones" id="initial-time-zones"> 
+            <option>America/Chicago</option>
+            <option>America/Denver</option>
+            <option>America/Los_Angeles</option>
+            <option>America/New_York</option>
+            <option>America/Tokyo</option>
+  
+        </select>
+        <br>
+        <label for="dateInput">Date:</label>
+        <input type="date" id="dateInput">
+        <br>
+        <label for="timeInput">Time:</label>
+        <input type="time" id="timeInput">
+        </div>
+        </div>
+        <div class="col-sm">
+        <button  class ="btn btn-success"onclick="convertTime()">Convert Time</button>
+        </div>
+
+        <div class="card col-sm">
+            <div class="card-title">
+                Destination
+            </div>
+            <div class="card-body">
+        <label for-="ending-area">Choose the continent/area that your destination time zone is in:</label>
+        <select name="ending-area" id="ending-area">
+            <option>America</option>
+            <option>Africa</option>
+            <option>Antarctica</option>
+            <option>Arctic</option>
+            <option>Asia</option>
+            <option>Atlantic</option>
+            <option>Australia</option>
+            <option>Europe</option>
+            <option>Indian</option>
+            <option>Pacific</option>
+        </select>
+        <label for="dest-time-zones">Choose a destination Time:</label>
+        <select name="dest-time-zones" id="dest-time-zones">
+          <option>America/Chicago</option>
+          <option>America/Denver</option>
+          <option>America/Los_Angeles</option>
+          <option>America/New_York</option>
+          <option>America/Tokyo</option>
+
+        </select>
+        <br>
+        <label for="result">Result:</label>
+        <output id="result"></output>
+        </div>
+        </div>
+        </div>
+
+        </div>
+        <script src="script.js"></script>
+        
+    </body>
+</html>
